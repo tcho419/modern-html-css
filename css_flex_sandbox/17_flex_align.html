@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flex Align</title>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /*  justify-content aligns items horizontal
+          
+          OPTIONS:
+          -------
+          flex-start
+          flex-end
+          center
+          space-between
+          space-around
+          space-evenly
+        */
+        background: #555;
+        height: 600px;
+        align-items: flex-start;
+        /*  align-items aligns item vertical (there must be a height)
+          
+          OPTIONS:
+          -------
+          flex-start
+          flex-end
+          center
+          baseline
+          stretch
+        */
+
+        /* align-content: align items vertical where there is extra space on wrap */
+      }
+      .item {
+        background: #f4f4f4;
+        border: #ccc solid 1px;
+        padding: 1rem;
+        text-align: center;
+        margin: 0.5rem;
+        flex-basis: 400px;
+      }
+      .item-2 {
+        align-self: flex-end;
+        /* same options as align-items, can also do 'order' */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="item item-1"><h3>Item 1</h3></div>
+      <div class="item item-2"><h3>Item 2</h3></div>
+      <div class="item item-3"><h3>Item 3</h3></div>
+    </div>
+  </body>
+</html>
